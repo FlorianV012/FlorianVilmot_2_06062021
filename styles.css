@@ -1,102 +1,180 @@
 /* Partie generale */
 
-*, ::before, ::after {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+*,
+::before,
+::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
-body{
-    font-family: 'Raleway', sans-serif;
-    margin: 0 50px;
+body {
+  font-family: "Raleway", sans-serif;
+  margin: 0 50px;
 }
 
 /* Header */
 
-.bandeau{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-    height: 120px;
+.bandeau {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 120px;
 }
 
-nav{
+.menu{
     display: flex;
+    flex-direction: row-reverse;
 }
-nav ul{
-    display: flex;
+
+
+nav ul {
+  display: flex;
 }
 
 nav li {
-list-style: none;
-padding-left: 65px;
+  list-style: none;
+  padding-left: 65px;
 }
 
-.inscription{
-padding-left: 65px;
-font-size: 16px;
-font-weight: 700;
-color: #0065FC;
-cursor: pointer;
+.inscription {
+  padding-left: 65px;
+  font-size: 16px;
+  font-weight: 700;
+  color: #0065fc;
+  cursor: pointer;
 }
 
 nav a {
-    text-decoration: none;
-    color: black;
-    font-size: 16px;
-    cursor: pointer;
+  text-decoration: none;
+  color: black;
+  font-size: 16px;
+  cursor: pointer;
 }
 
-nav a:hover{
-    color: #0065FC;
+nav a:hover {
+  color: #0065fc;
 }
 
 nav a:hover::before {
-    content: '';
-    display: block;
-    width: 120%;
-    height: 2px;
-    background: #0065FC;
-    position: relative;
-    left: -10%;
-    top: -50px;
+  content: "";
+  display: block;
+  width: 120%;
+  height: 2px;
+  background: #0065fc;
+  position: relative;
+  left: -10%;
+  top: -50px;
 }
 
 header h1 {
-    font-size: 22px;
+  font-size: 22px;
 }
 
-header p{
-    font-size: 16px;
-    padding-top: 10px;
-    margin-bottom: 20px;
+header p {
+  font-size: 16px;
+  padding-top: 10px;
+  margin-bottom: 20px;
 }
 
-.fa-map-marker-alt{
-    height: 50px;
-    width: 52px;
-    background: #f2f2f2;
-    line-height: 50px;
-    text-align: center;
-    border-radius: 15px 0 0 15px;
+.fa-map-marker-alt {
+  height: 50px;
+  width: 52px;
+  background: #f2f2f2;
+  line-height: 50px;
+  text-align: center;
+  border-radius: 15px 0 0 15px;
 }
-.champ-recherche{
-    height: 50px;
-    width: 234px;
-    padding: 20px;
-    border: 2px solid #f2f2f2;
-    font-weight: bold;
-    font-size: 18px;
+.champ-recherche {
+  height: 50px;
+  width: 234px;
+  padding: 20px;
+  border: 2px solid #f2f2f2;
+  font-weight: bold;
+  font-size: 18px;
 }
 
-.btn-recherche{
-    height: 50px;
-    width: 134px;
-    background: #0065FC;
-    color: #fff;
-    border: none;
-    border-radius: 0 15px 15px 0;
-    font-weight: bold;
-    font-size: 18px;
+.btn-recherche {
+  height: 50px;
+  width: 134px;
+  background: #0065fc;
+  color: #fff;
+  border: none;
+  border-radius: 0 15px 15px 0;
+  font-weight: bold;
+  font-size: 18px;
+  cursor: pointer;
+}
+.btn-ico{
+    display: none;
+}
+
+/* Header partie responsive */
+
+@media screen and (max-width: 770px) {
+  body {
+    margin: 0 20px;
+  }
+  nav li {
+    padding-left: 35px;
+  }
+
+  .inscription {
+    padding-left: 35px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+    nav li{
+        padding-left: 0;
+        width: 50vw;
+        text-align: center;
+    }
+    nav{
+        display: flex;
+        position: absolute;
+        top: 100px;
+    }
+    .bandeau{
+        margin-bottom: 60px;
+    }
+    nav a:hover::before{
+        display: none;
+    }
+    nav a::after{
+        content: '';
+        display: block;
+        width: 100%;
+        background: #f1f1f1;
+        height: 4px;
+        position: relative;
+        top: 20px;
+    }
+    nav a:hover::after{
+        background: #0065fc;
+    }
+    .btn-txt{
+        display: none;
+    }
+    .btn-ico{
+        display: inline;
+    }
+    .btn-recherche{
+        width: 50px;
+        border-radius: 15px;
+        position: relative;
+        left: -10px;
+
+    }
+    .champ-recherche{
+        width: 244px;
+    }    
+}
+@media screen and (max-width: 390px){
+    .champ-recherche{
+        width: 174px;
+        padding: 10px;
+        font-size: 16px;
+    }
 }
