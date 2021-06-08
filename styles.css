@@ -23,11 +23,10 @@ body {
   height: 120px;
 }
 
-.menu{
-    display: flex;
-    flex-direction: row-reverse;
+.menu {
+  display: flex;
+  flex-direction: row-reverse;
 }
-
 
 nav ul {
   display: flex;
@@ -106,11 +105,11 @@ header p {
   font-size: 18px;
   cursor: pointer;
 }
-.btn-ico{
-    display: none;
+.btn-ico {
+  display: none;
 }
 
-.recherche{
+.recherche {
   margin-bottom: 30px;
 }
 
@@ -130,62 +129,61 @@ header p {
 }
 
 @media screen and (max-width: 500px) {
-    nav li{
-        padding-left: 0;
-        width: 50vw;
-        text-align: center;
-    }
-    nav{
-        display: flex;
-        position: absolute;
-        top: 100px;
-    }
-    .bandeau{
-        margin-bottom: 60px;
-    }
-    nav a:hover::before{
-        display: none;
-    }
-    nav a::after{
-        content: '';
-        display: block;
-        width: 100%;
-        background: #f1f1f1;
-        height: 4px;
-        position: relative;
-        top: 20px;
-    }
-    nav a:hover::after{
-        background: #0065fc;
-    }
-    .btn-txt{
-        display: none;
-    }
-    .btn-ico{
-        display: inline;
-    }
-    .btn-recherche{
-        width: 50px;
-        border-radius: 15px;
-        position: relative;
-        left: -10px;
-
-    }
-    .champ-recherche{
-        width: 244px;
-    }    
+  nav li {
+    padding-left: 0;
+    width: 50vw;
+    text-align: center;
+  }
+  nav {
+    display: flex;
+    position: absolute;
+    top: 100px;
+  }
+  .bandeau {
+    margin-bottom: 60px;
+  }
+  nav a:hover::before {
+    display: none;
+  }
+  nav a::after {
+    content: "";
+    display: block;
+    width: 100%;
+    background: #f1f1f1;
+    height: 4px;
+    position: relative;
+    top: 20px;
+  }
+  nav a:hover::after {
+    background: #0065fc;
+  }
+  .btn-txt {
+    display: none;
+  }
+  .btn-ico {
+    display: inline;
+  }
+  .btn-recherche {
+    width: 50px;
+    border-radius: 15px;
+    position: relative;
+    left: -10px;
+  }
+  .champ-recherche {
+    width: 244px;
+  }
 }
-@media screen and (max-width: 390px){
-    .champ-recherche{
-        width: 174px;
-        padding: 10px;
-        font-size: 16px;
-    }
+@media screen and (max-width: 390px) {
+  .champ-recherche {
+    width: 174px;
+    padding: 10px;
+    font-size: 16px;
+  }
 }
 
 /* Filtres */
 
-.filtres{
+.filtres {
   display: flex;
   align-items: center;
   flex-wrap: wrap;
@@ -195,13 +193,13 @@ header p {
   margin-right: 35px;
 }
 
-.filtre-container{
+.filtre-container {
   display: flex;
   align-items: center;
   flex-wrap: wrap;
 }
 
-.filtre-cartouche{
+.filtre-cartouche {
   display: flex;
   height: 50px;
   border: 2px solid #f2f2f2;
@@ -209,20 +207,21 @@ header p {
   border-radius: 25px;
   margin-right: 25px;
 }
-.filtre-cartouche-ico{
+
+.filtre-cartouche-ico {
   width: 50px;
   height: 50px;
   border-radius: 25px;
-  background: #DEEBFF;
+  background: #deebff;
   color: #0065fc;
   text-align: center;
 }
 
-.filtre-cartouche-txt{
+.filtre-cartouche-txt {
   padding: 0 15px;
 }
 
-.filtre-txt{
+.filtre-txt {
   display: flex;
   width: 100%;
   line-height: 24px;
@@ -230,7 +229,7 @@ header p {
   margin: 35px 0;
 }
 
-.filtre-txt-ico{
+.filtre-txt-ico {
   width: 24px;
   height: 24px;
   margin-right: 10px;
@@ -239,15 +238,28 @@ header p {
   font-size: 12px;
   color: #0065fc;
   text-align: center;
-  line-height: 24px;        
+  line-height: 24px;
 }
 
-@media screen and (max-width: 1020px){
-  .filtres{
+.filtre-cartouche:hover > span {
+  transition: all 0.5s ease-in-out;
+  background: #0065fc;
+  color: white;
+}
+
+.filtre-cartouche:hover {
+  transition: all 0.2s ease-in-out;
+  background: #deebff;
+  color: #0065fc;
+  border: none;
+}
+
+@media screen and (max-width: 1020px) {
+  .filtres {
     flex-direction: column;
     align-items: flex-start;
   }
-  .filtre-cartouche{
+  .filtre-cartouche {
     margin-top: 15px;
-  }  
+  }
 }
