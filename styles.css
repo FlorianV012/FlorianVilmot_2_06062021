@@ -128,7 +128,8 @@ header p {
 /* Header partie responsive */
 
 @media screen and (max-width: 770px) {
-  header {
+  header,
+  section {
     margin: 0 20px;
   }
   nav li {
@@ -141,8 +142,20 @@ header p {
 }
 
 @media screen and (max-width: 500px) {
+  header {
+    margin: 0;
+  }
+  .logo,
+  .inscription {
+    padding: 0 20px;
+  }
+  header h1,
+  header p {
+    margin: 0 20px;
+  }
   nav li {
     padding-left: 0;
+    padding-right: 0;
     width: 50vw;
     text-align: center;
   }
@@ -320,7 +333,7 @@ header p {
   width: 250px;
   height: 200px;
   margin: 15px 0;
-  background-color: white;
+  background-color: #0065fc;
   border-radius: 15px;
   border: 6px solid white;
 }
@@ -368,7 +381,7 @@ header p {
   width: 340px;
   height: 150px;
   margin: 15px;
-  background-color: white;
+  background-color: #0065fc;
   border-radius: 15px;
   border: 6px solid white;
 }
@@ -405,4 +418,58 @@ article .carte4 i:nth-last-child(2) {
 aside .carte2 i:nth-last-child(1),
 aside .carte3 i:nth-last-child(1) {
   color: #d9d9d9;
+}
+
+/* Section Hébergements */
+
+@media screen and (max-width: 1290px) {
+  #hebergements {
+    flex-direction: column-reverse;
+  }
+  #hebergements aside {
+    width: 100%;
+    max-width: 100%;
+    margin-bottom: 30px;
+  }
+  #hebergements article {
+    width: 100%;
+    max-width: 100%;
+  }
+  #hebergements aside .carte-container {
+    flex-direction: row;
+  }
+  .fa-chart-line {
+    margin-right: 30px;
+  }
+}
+@media screen and (max-width: 500px) {
+  #hebergements {
+    margin: 0;
+  }
+  #hebergements article,
+  #hebergements aside {
+    border-radius: 0;
+  }
+  #hebergements article .carte,
+  #hebergements aside .carte {
+    width: 340px;
+    margin: 15px auto;
+  }
+  #hebergements aside .carte-txt {
+    width: 200px;
+  }
+}
+@media screen and (max-width: 390px){
+  #hebergements article .carte,
+  #hebergements aside .carte{
+    margin: 15px 5px;
+  }
+  #hebergements aside .carte-txt{
+    width: 150px;}
+    #hebergements aside .carte-txt h3{
+      font-size: 16px;
+    }
+    #hebergements aside .carte-txt p{
+      font-size: 14px;
+    }
 }
