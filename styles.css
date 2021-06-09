@@ -9,10 +9,19 @@
 }
 
 body {
+  max-width: 1500px;
   font-family: "Raleway", sans-serif;
+  margin: 0 auto;
+}
+
+header,
+section {
   margin: 0 50px;
 }
 
+a {
+  text-decoration: none;
+}
 /* Header */
 
 .bandeau {
@@ -46,7 +55,6 @@ nav li {
 }
 
 nav a {
-  text-decoration: none;
   color: black;
   font-size: 16px;
   cursor: pointer;
@@ -84,6 +92,10 @@ header p {
   line-height: 50px;
   text-align: center;
   border-radius: 15px 0 0 15px;
+  position: relative;
+  top: -2px;
+  vertical-align: middle;
+  line-height: 50px !important;
 }
 .champ-recherche {
   height: 50px;
@@ -116,7 +128,7 @@ header p {
 /* Header partie responsive */
 
 @media screen and (max-width: 770px) {
-  body {
+  header {
     margin: 0 20px;
   }
   nav li {
@@ -149,7 +161,7 @@ header p {
     content: "";
     display: block;
     width: 100%;
-    background: #f1f1f1;
+    background: #f2f2f2;
     height: 4px;
     position: relative;
     top: 20px;
@@ -206,6 +218,7 @@ header p {
   line-height: 50px;
   border-radius: 25px;
   margin-right: 25px;
+  cursor: pointer;
 }
 
 .filtre-cartouche-ico {
@@ -215,6 +228,9 @@ header p {
   background: #deebff;
   color: #0065fc;
   text-align: center;
+  position: relative;
+  top: -2px;
+  left: -2px;
 }
 
 .filtre-cartouche-txt {
@@ -245,6 +261,8 @@ header p {
   transition: all 0.5s ease-in-out;
   background: #0065fc;
   color: white;
+  top: 0px;
+  left: 0px;
 }
 
 .filtre-cartouche:hover {
@@ -262,4 +280,129 @@ header p {
   .filtre-cartouche {
     margin-top: 15px;
   }
+}
+
+/* Section Hébergements */
+
+#hebergements {
+  display: flex;
+  justify-content: space-between;
+}
+#hebergements h2 {
+  font-size: 20px;
+  padding: 15px;
+}
+
+#hebergements article {
+  display: flex;
+  flex-direction: column;
+  background: #f2f2f2;
+  border-radius: 20px;
+  width: 69%;
+  max-width: 900px;
+  padding: 30px 20px;
+}
+
+#hebergements .bas {
+  margin-top: 30px;
+  font-weight: bold;
+}
+
+#hebergements .carte-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+#hebergements article .carte {
+  display: flex;
+  align-items: flex-end;
+  width: 250px;
+  height: 200px;
+  margin: 15px 0;
+  background-color: white;
+  border-radius: 15px;
+  border: 6px solid white;
+}
+
+#hebergements article .carte-txt {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  background: white;
+  color: black;
+  width: 100%;
+  height: 80px;
+  padding: 0 10px;
+}
+
+#hebergements article .carte-txt h3 {
+  font-size: 16px;
+  font-weight: bold;
+}
+.carte-etoile {
+  color: #0065fc;
+}
+
+#hebergements aside {
+  display: flex;
+  flex-direction: column;
+  background: #f2f2f2;
+  border-radius: 20px;
+  width: 30%;
+  max-width: 460px;
+  padding: 30px 20px;
+}
+#hebergements aside .top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.fa-chart-line {
+  font-size: 30px;
+}
+
+#hebergements aside .carte {
+  display: flex;
+  justify-content: flex-end;
+  width: 340px;
+  height: 150px;
+  margin: 15px;
+  background-color: white;
+  border-radius: 15px;
+  border: 6px solid white;
+}
+
+#hebergements aside .carte-txt {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  background: white;
+  color: black;
+  width: 210px;
+  height: 100%;
+  padding: 10px;
+}
+#hebergements aside .carte-txt p {
+  padding: 10px 0;
+}
+
+#hebergements aside .carte-etoile {
+  margin-top: auto;
+}
+
+article .carte1 i:nth-last-child(1),
+article .carte3 i:nth-last-child(1),
+article .carte5 i:nth-last-child(1) {
+  color: #d9d9d9;
+}
+
+article .carte4 i:nth-last-child(1),
+article .carte4 i:nth-last-child(2) {
+  color: #d9d9d9;
+}
+
+aside .carte2 i:nth-last-child(1),
+aside .carte3 i:nth-last-child(1) {
+  color: #d9d9d9;
 }
