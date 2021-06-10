@@ -19,6 +19,10 @@ section {
   margin: 0 50px;
 }
 
+li {
+  list-style: none;
+}
+
 a {
   text-decoration: none;
 }
@@ -42,7 +46,6 @@ nav ul {
 }
 
 nav li {
-  list-style: none;
   padding-left: 65px;
 }
 
@@ -483,7 +486,7 @@ aside .carte3 i:nth-last-child(1) {
 /* Section Activités */
 
 #activites {
-  margin: 50px;
+  margin: 50px 50px 20px;
 }
 
 #activites h2 {
@@ -552,13 +555,13 @@ aside .carte3 i:nth-last-child(1) {
     flex: none;
   }
 }
-@media screen and (max-width: 999px){
-  #activites .carte-container{
+@media screen and (max-width: 1014px) {
+  #activites .carte-container {
     height: 560px;
   }
 }
-@media screen and (max-width: 699px){
-  #activites .carte-container{
+@media screen and (max-width: 714px) {
+  #activites .carte-container {
     height: 1150px;
   }
 }
@@ -567,23 +570,50 @@ aside .carte3 i:nth-last-child(1) {
   #activites {
     margin: 0;
   }
-  #activites .carte-container{
+  #activites .carte-container {
     height: 1350px;
   }
-  #activites .carte{
+  #activites .carte {
     height: 190px;
     width: 340px;
     margin: 15px auto;
   }
-  #activites h2{
+  #activites h2 {
     margin-left: 20px;
   }
 }
 
-@media screen and (max-width: 390px){
-  #activites .carte{
+@media screen and (max-width: 390px) {
+  #activites .carte {
     margin: 15px 5px;
     width: 85%;
   }
-  
+}
+
+/* Footer */
+
+footer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  width: 100%;
+  background: #f2f2f2;
+  margin: 40px 0;
+  padding: 0 50px 50px;
+}
+
+.colonne {
+  width: 33%;
+  min-width: 300px;
+}
+
+.colonne h3 {
+  font-size: 18px;
+  margin-top: 50px;
+  padding: 10px 0;
+}
+
+.colonne li {
+  padding: 5px 0;
+  font-size: 16px;
 }
