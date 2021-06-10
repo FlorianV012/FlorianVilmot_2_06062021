@@ -422,7 +422,7 @@ aside .carte3 i:nth-last-child(1) {
   color: #d9d9d9;
 }
 
-/* Section Hébergements */
+/* Section Hébergements responsive */
 
 @media screen and (max-width: 1290px) {
   #hebergements {
@@ -448,7 +448,7 @@ aside .carte3 i:nth-last-child(1) {
   #hebergements {
     margin: 0;
   }
-  #hebergements article{
+  #hebergements article {
     background-color: white;
   }
   #hebergements aside {
@@ -538,4 +538,52 @@ aside .carte3 i:nth-last-child(1) {
   line-height: 55px;
   font-size: 14px;
   font-weight: bold;
+}
+
+/* Section Activités responsive */
+
+@media screen and (max-width: 1290px) {
+  #activites .carte-container {
+    height: 360px;
+    flex-direction: row;
+    align-content: flex-start;
+  }
+  #activites .carte-container .carte:nth-child(n) {
+    flex: none;
+  }
+}
+@media screen and (max-width: 999px){
+  #activites .carte-container{
+    height: 560px;
+  }
+}
+@media screen and (max-width: 699px){
+  #activites .carte-container{
+    height: 1150px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  #activites {
+    margin: 0;
+  }
+  #activites .carte-container{
+    height: 1350px;
+  }
+  #activites .carte{
+    height: 190px;
+    width: 340px;
+    margin: 15px auto;
+  }
+  #activites h2{
+    margin-left: 20px;
+  }
+}
+
+@media screen and (max-width: 390px){
+  #activites .carte{
+    margin: 15px 5px;
+    width: 85%;
+  }
+  
 }
