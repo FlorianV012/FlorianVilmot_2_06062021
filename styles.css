@@ -336,6 +336,7 @@ header p {
   background-color: #0065fc;
   border-radius: 15px;
   border: 6px solid white;
+  box-shadow: 0 5px 5px rgba(0, 0, 0, 0.5);
 }
 
 #hebergements article .carte-txt {
@@ -384,6 +385,7 @@ header p {
   background-color: #0065fc;
   border-radius: 15px;
   border: 6px solid white;
+  box-shadow: 0 5px 5px rgba(0, 0, 0, 0.5);
 }
 
 #hebergements aside .carte-txt {
@@ -446,9 +448,12 @@ aside .carte3 i:nth-last-child(1) {
   #hebergements {
     margin: 0;
   }
-  #hebergements article,
+  #hebergements article{
+    background-color: white;
+  }
   #hebergements aside {
     border-radius: 0;
+    margin-bottom: 0px;
   }
   #hebergements article .carte,
   #hebergements aside .carte {
@@ -459,17 +464,78 @@ aside .carte3 i:nth-last-child(1) {
     width: 200px;
   }
 }
-@media screen and (max-width: 390px){
+@media screen and (max-width: 390px) {
   #hebergements article .carte,
-  #hebergements aside .carte{
+  #hebergements aside .carte {
     margin: 15px 5px;
   }
-  #hebergements aside .carte-txt{
-    width: 150px;}
-    #hebergements aside .carte-txt h3{
-      font-size: 16px;
-    }
-    #hebergements aside .carte-txt p{
-      font-size: 14px;
-    }
+  #hebergements aside .carte-txt {
+    width: 150px;
+  }
+  #hebergements aside .carte-txt h3 {
+    font-size: 16px;
+  }
+  #hebergements aside .carte-txt p {
+    font-size: 14px;
+  }
+}
+
+/* Section Activités */
+
+#activites {
+  margin: 50px;
+}
+
+#activites h2 {
+  margin: 20px 0;
+  font-size: 20px;
+}
+
+#activites .carte-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-content: space-between;
+  flex-wrap: wrap;
+  width: 100%;
+  height: 500px;
+}
+
+#activites .carte-container .carte:nth-child(1),
+#activites .carte-container .carte:nth-child(4) {
+  flex: 90%;
+}
+#activites .carte-container .carte:nth-child(2) {
+  flex: 50%;
+}
+#activites .carte-container .carte:nth-child(3) {
+  flex: 30%;
+}
+#activites .carte-container .carte:nth-child(5),
+#activites .carte-container .carte:nth-child(6) {
+  flex: 40%;
+}
+
+#activites .carte {
+  display: flex;
+  align-items: flex-end;
+  min-width: 300px;
+  min-height: 160px;
+  margin-bottom: 40px;
+  background-color: #0065fc;
+  border-radius: 15px;
+  box-shadow: 0 5px 5px rgba(0, 0, 0, 0.5);
+}
+
+#activites .carte-txt {
+  display: inline-block;
+  background: white;
+  color: black;
+  width: 100%;
+  height: 55px;
+  border-radius: 0 0 15px 15px;
+  padding: 0 20px;
+  line-height: 55px;
+  font-size: 14px;
+  font-weight: bold;
 }
