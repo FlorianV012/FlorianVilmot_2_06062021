@@ -9,7 +9,7 @@
 }
 
 body {
-  max-width: 1500px;
+  max-width: 1600px;
   font-family: "Raleway", sans-serif;
   margin: 0 auto;
 }
@@ -51,7 +51,6 @@ nav li {
 
 .inscription {
   padding-left: 65px;
-  font-size: 16px;
   font-weight: 700;
   color: #0065fc;
   cursor: pointer;
@@ -59,7 +58,6 @@ nav li {
 
 nav a {
   color: black;
-  font-size: 16px;
   cursor: pointer;
 }
 
@@ -83,7 +81,6 @@ header h1 {
 }
 
 header p {
-  font-size: 16px;
   padding-top: 10px;
   margin-bottom: 20px;
 }
@@ -257,7 +254,6 @@ header p {
   display: flex;
   width: 100%;
   line-height: 24px;
-  font-size: 16px;
   margin: 35px 0;
 }
 
@@ -271,6 +267,8 @@ header p {
   color: #0065fc;
   text-align: center;
   line-height: 24px;
+  vertical-align: middle;
+  line-height: 24px !important;
 }
 
 .filtre-cartouche:hover > span {
@@ -315,7 +313,6 @@ header p {
   background: #f2f2f2;
   border-radius: 20px;
   width: 69%;
-  max-width: 900px;
   padding: 30px 20px;
 }
 
@@ -332,14 +329,21 @@ header p {
 
 #hebergements article .carte {
   display: flex;
-  align-items: flex-end;
-  width: 250px;
+  flex-direction: column;
+  min-width: 233px;
+  width: 28%;
   height: 200px;
   margin: 15px 0;
-  background-color: #0065fc;
   border-radius: 15px;
   border: 6px solid white;
   box-shadow: 0 5px 5px rgba(0, 0, 0, 0.5);
+}
+
+#hebergements article img {
+  object-fit: cover;
+  width: 100%;
+  height: 60%;
+  border-radius: 15px 15px 0 0;
 }
 
 #hebergements article .carte-txt {
@@ -349,7 +353,7 @@ header p {
   background: white;
   color: black;
   width: 100%;
-  height: 80px;
+  height: 40%;
   padding: 0 10px;
 }
 
@@ -367,7 +371,6 @@ header p {
   background: #f2f2f2;
   border-radius: 20px;
   width: 30%;
-  max-width: 460px;
   padding: 30px 20px;
 }
 #hebergements aside .top {
@@ -382,13 +385,21 @@ header p {
 #hebergements aside .carte {
   display: flex;
   justify-content: flex-end;
-  width: 340px;
+  max-width: 350px;
+  min-width: 300px;
+  width: 90%;
   height: 150px;
   margin: 15px;
-  background-color: #0065fc;
   border-radius: 15px;
   border: 6px solid white;
   box-shadow: 0 5px 5px rgba(0, 0, 0, 0.5);
+}
+
+#hebergements aside img {
+  object-fit: cover;
+  width: 40%;
+  height: 100%;
+  border-radius: 15px 0 0 15px;
 }
 
 #hebergements aside .carte-txt {
@@ -397,10 +408,11 @@ header p {
   justify-content: flex-start;
   background: white;
   color: black;
-  width: 210px;
+  width: 60%;
   height: 100%;
   padding: 10px;
 }
+
 #hebergements aside .carte-txt p {
   padding: 10px 0;
 }
@@ -427,7 +439,33 @@ aside .carte3 i:nth-last-child(1) {
 
 /* Section Hébergements responsive */
 
-@media screen and (max-width: 1290px) {
+@media screen and (max-width: 1200px) {
+  #hebergements article .carte {
+    width: 45%;
+  }
+  #hebergements article {
+    width: 55%;
+  }
+  #hebergements aside {
+    width: 40%;
+  }
+}
+@media screen and (max-width: 1040px) {
+  #hebergements article .carte {
+    width: 95%;
+  }
+  #hebergements article {
+    width: 48%;
+  }
+  #hebergements aside {
+    width: 48%;
+  }
+  #hebergements aside .carte-txt h3 {
+    font-size: 16px;
+    font-weight: bold;
+  }
+}
+@media screen and (max-width: 790px) {
   #hebergements {
     flex-direction: column-reverse;
   }
@@ -446,7 +484,11 @@ aside .carte3 i:nth-last-child(1) {
   .fa-chart-line {
     margin-right: 30px;
   }
+  #hebergements article .carte {
+    max-width: 350px;
+  }
 }
+
 @media screen and (max-width: 500px) {
   #hebergements {
     margin: 0;
@@ -458,28 +500,14 @@ aside .carte3 i:nth-last-child(1) {
     border-radius: 0;
     margin-bottom: 0px;
   }
-  #hebergements article .carte,
+  .fa-chart-line {
+    margin-right: 20px;
+  }
+  #hebergements article .carte {
+    width: 90%;
+  }
   #hebergements aside .carte {
-    width: 340px;
-    margin: 15px auto;
-  }
-  #hebergements aside .carte-txt {
-    width: 200px;
-  }
-}
-@media screen and (max-width: 390px) {
-  #hebergements article .carte,
-  #hebergements aside .carte {
-    margin: 15px 5px;
-  }
-  #hebergements aside .carte-txt {
-    width: 150px;
-  }
-  #hebergements aside .carte-txt h3 {
-    font-size: 16px;
-  }
-  #hebergements aside .carte-txt p {
-    font-size: 14px;
+    width: 90%;
   }
 }
 
@@ -521,13 +549,20 @@ aside .carte3 i:nth-last-child(1) {
 
 #activites .carte {
   display: flex;
-  align-items: flex-end;
-  min-width: 300px;
+  flex-direction: column;
+  max-width: 300px;
   min-height: 160px;
   margin-bottom: 40px;
   background-color: #0065fc;
   border-radius: 15px;
   box-shadow: 0 5px 5px rgba(0, 0, 0, 0.5);
+}
+
+#activites img {
+  object-fit: cover;
+  width: 100%;
+  height: calc(100% - 55px);
+  border-radius: 15px 15px 0 0;
 }
 
 #activites .carte-txt {
@@ -615,5 +650,4 @@ footer {
 
 .colonne li {
   padding: 5px 0;
-  font-size: 16px;
 }
