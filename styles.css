@@ -307,7 +307,7 @@ header p {
   padding: 15px;
 }
 
-#hebergements article {
+#hebergements .hebergements-principale {
   display: flex;
   flex-direction: column;
   background: #f2f2f2;
@@ -327,7 +327,7 @@ header p {
   justify-content: space-around;
 }
 
-#hebergements article .carte {
+#hebergements .hebergements-principale .carte {
   display: flex;
   flex-direction: column;
   min-width: 233px;
@@ -339,14 +339,14 @@ header p {
   box-shadow: 0 5px 5px rgba(0, 0, 0, 0.5);
 }
 
-#hebergements article img {
+#hebergements .hebergements-principale img {
   object-fit: cover;
   width: 100%;
   height: 60%;
   border-radius: 15px 15px 0 0;
 }
 
-#hebergements article .carte-txt {
+#hebergements .hebergements-principale .carte-txt {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -357,7 +357,7 @@ header p {
   padding: 0 10px;
 }
 
-#hebergements article .carte-txt h3 {
+#hebergements .hebergements-principale .carte-txt h3 {
   font-size: 16px;
   font-weight: bold;
 }
@@ -421,14 +421,14 @@ header p {
   margin-top: auto;
 }
 
-article .carte1 i:nth-last-child(1),
-article .carte3 i:nth-last-child(1),
-article .carte5 i:nth-last-child(1) {
+.hebergements-principale .carte1 i:nth-last-child(1),
+.hebergements-principale .carte3 i:nth-last-child(1),
+.hebergements-principale .carte5 i:nth-last-child(1) {
   color: #d9d9d9;
 }
 
-article .carte4 i:nth-last-child(1),
-article .carte4 i:nth-last-child(2) {
+.hebergements-principale .carte4 i:nth-last-child(1),
+.hebergements-principale .carte4 i:nth-last-child(2) {
   color: #d9d9d9;
 }
 
@@ -440,10 +440,10 @@ aside .carte3 i:nth-last-child(1) {
 /* Section Hébergements responsive */
 
 @media screen and (max-width: 1200px) {
-  #hebergements article .carte {
+  #hebergements .hebergements-principale .carte {
     width: 45%;
   }
-  #hebergements article {
+  #hebergements .hebergements-principale {
     width: 55%;
   }
   #hebergements aside {
@@ -451,10 +451,10 @@ aside .carte3 i:nth-last-child(1) {
   }
 }
 @media screen and (max-width: 1040px) {
-  #hebergements article .carte {
+  #hebergements .hebergements-principale .carte {
     width: 95%;
   }
-  #hebergements article {
+  #hebergements .hebergements-principale {
     width: 48%;
   }
   #hebergements aside {
@@ -474,7 +474,7 @@ aside .carte3 i:nth-last-child(1) {
     max-width: 100%;
     margin-bottom: 30px;
   }
-  #hebergements article {
+  #hebergements .hebergements-principale {
     width: 100%;
     max-width: 100%;
   }
@@ -484,7 +484,7 @@ aside .carte3 i:nth-last-child(1) {
   .fa-chart-line {
     margin-right: 30px;
   }
-  #hebergements article .carte {
+  #hebergements .hebergements-principale .carte {
     max-width: 350px;
   }
 }
@@ -493,7 +493,7 @@ aside .carte3 i:nth-last-child(1) {
   #hebergements {
     margin: 0;
   }
-  #hebergements article {
+  #hebergements .hebergements-principale {
     background-color: white;
   }
   #hebergements aside {
@@ -503,7 +503,7 @@ aside .carte3 i:nth-last-child(1) {
   .fa-chart-line {
     margin-right: 20px;
   }
-  #hebergements article .carte {
+  #hebergements .hebergements-principale .carte {
     width: 90%;
   }
   #hebergements aside .carte {
@@ -582,22 +582,30 @@ aside .carte3 i:nth-last-child(1) {
 
 @media screen and (max-width: 1290px) {
   #activites .carte-container {
-    height: 360px;
+    height: auto;
     flex-direction: row;
     align-content: flex-start;
   }
   #activites .carte-container .carte:nth-child(n) {
     flex: none;
+    max-width: 350px;
   }
 }
-@media screen and (max-width: 1014px) {
-  #activites .carte-container {
-    height: 560px;
+
+@media screen and (max-width: 1200px) {
+  #activites .carte {
+    height: 190px;
+    width: 31%;
   }
 }
-@media screen and (max-width: 714px) {
-  #activites .carte-container {
-    height: 1150px;
+@media screen and (max-width: 1040px) {
+  #activites .carte {
+    width: 48%;
+  }
+}
+@media screen and (max-width: 700px) {
+  #activites .carte {
+    width: 90%;
   }
 }
 
@@ -605,23 +613,9 @@ aside .carte3 i:nth-last-child(1) {
   #activites {
     margin: 0;
   }
-  #activites .carte-container {
-    height: 1350px;
-  }
-  #activites .carte {
-    height: 190px;
-    width: 340px;
-    margin: 15px auto;
-  }
+
   #activites h2 {
     margin-left: 20px;
-  }
-}
-
-@media screen and (max-width: 390px) {
-  #activites .carte {
-    margin: 15px 5px;
-    width: 85%;
   }
 }
 
